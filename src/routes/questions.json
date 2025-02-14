@@ -1,19 +1,7 @@
 [
 	{
 		"topic": "",
-		"question": "646 303-9233",
-		"options": [
-			"",
-			"",
-			"",
-			""
-		],
-		"answer": 1,
-		"played": false
-	},
-	{
-		"topic": "",
-		"question": "Who snitched to the Rosh hayeshivah when Lillian got a hot tub",
+		"question": "Who snitched to the Rosh Yeshivah when Lillian got a hot tub",
 		"options": [
 			"The neighbors",
 			"The cleaning lady",
@@ -25,7 +13,7 @@
 	},
 	{
 		"topic": "",
-		"question": "How many steps are in the front of yeshiva? (Entrance WITH the code)",
+		"question": "How many steps are there at the front entrance of the yeshiva (with the code)",
 		"options": [
 			"4",
 			"5",
@@ -49,7 +37,7 @@
 	},
 	{
 		"topic": "",
-		"question": "What is Primo's actual name",
+		"question": "What is Primo’s real name",
 		"options": [
 			"Jose",
 			"Angel",
@@ -73,11 +61,11 @@
 	},
 	{
 		"topic": "",
-		"question": "Which shtender does the Rosh hayeshivah prefer",
+		"question": "Which shtender does the Rosh Yeshiva prefer",
 		"options": [
 			"The new (brown) one",
 			"The old one with flat bar",
-			"R' Yaakov Meir's",
+			"R’ Yaakov Meir’s",
 			"The old one with the bar going up"
 		],
 		"answer": 3,
@@ -85,7 +73,7 @@
 	},
 	{
 		"topic": "",
-		"question": "Who named Mordechai Ely \"PONKY\"",
+		"question": "Who named Mordechai Ely "Ponky"",
 		"options": [
 			"JB",
 			"Tzvi Beast",
@@ -97,19 +85,19 @@
 	},
 	{
 		"topic": "",
-		"question": "What time is Shachris tomorrow?",
+		"question": "What time is Shachris tomorrow",
 		"options": [
-			"0.322916666666667",
-			"0.357638888888889",
-			"0.371527777777778",
-			"0.378472222222222"
+			"7:45",
+			"8:35",
+			"8:55",
+			"9:05"
 		],
 		"answer": 2,
 		"played": false
 	},
 	{
 		"topic": "",
-		"question": "What was R' Elans sons name",
+		"question": "What was R’ Elans sons name",
 		"options": [
 			"Avi",
 			"Etai",
@@ -157,11 +145,11 @@
 	},
 	{
 		"topic": "",
-		"question": "How much did Leiby Berko get paid for last year's campaign",
+		"question": "How much did Leiby Berko get paid for last year’s campaign",
 		"options": [
-			"10000",
-			"0.5",
-			"40000",
+			"10,000",
+			"50%",
+			"40,000",
 			"None of your business"
 		],
 		"answer": 3,
@@ -169,7 +157,7 @@
 	},
 	{
 		"topic": "",
-		"question": "Who spent the most time davening by Reb Shayalas kever",
+		"question": "Who spent the most time davening by Reb Shaya’las kever",
 		"options": [
 			"Elazar Goldberg",
 			"Moshe Mendelowitz",
@@ -184,7 +172,7 @@
 		"question": "Where do all the Mareh Mekomos sheets go after 1st seder",
 		"options": [
 			"Sheimos",
-			"Tzvi Sofer's wall",
+			"Tzvi Sofer’s wall",
 			"Garbage",
 			"In the walls of the Kosel"
 		],
@@ -201,6 +189,18 @@
 			"5"
 		],
 		"answer": 0,
+		"played": false
+	},
+	{
+		"topic": "",
+		"question": "Should we switch shiur to night seder",
+		"options": [
+			"Yes",
+			"No",
+			"No Comment",
+			"I don’t go anyway"
+		],
+		"answer": -1,
 		"played": false
 	}
 ]
