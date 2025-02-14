@@ -14,6 +14,6 @@ EXPOSE 80
 
 # Build
 # RUN npx prisma generate
-RUN npm run build
+# RUN npm run build
 
-CMD [ "npm", "run", "preview", "--", "--host" ]
+CMD [ "npm", "run", "dev", "--", "--host" ]
