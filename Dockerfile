@@ -18,7 +18,7 @@
 
 # CMD [ "npm", "run", "preview" ]
 
-FROM node:18 AS builder
+FROM node:20-alpine AS builder
 
 WORKDIR /app
 
@@ -32,12 +32,10 @@ ENV PUBLIC_SUPABASE_URL=${PUBLIC_SUPABASE_URL}
 ARG PUBLIC_SUPABASE_ANON_KEY
 ENV PUBLIC_SUPABASE_ANON_KEY=${PUBLIC_SUPABASE_ANON_KEY}
 
-RUN npx svelte-kit sync
-RUN npx prisma generate
 RUN npm run build
 RUN npm prune --production
 
-FROM node:18
+FROM node:20-alpine
 WORKDIR /app
 # COPY --from=builder /app/build build/
 # COPY --from=builder /app/node_modules node_modules/

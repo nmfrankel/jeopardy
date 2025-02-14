@@ -3,14 +3,17 @@
 
 	let question = $derived(app.questions_list[app.questionIndex]);
 	let timer = $state(59);
+	let counting = $state(false)
 	let interval: NodeJS.Timeout
 
 	function startTimer() {
 		clearInterval(interval);
+		counting = true
 
 		interval = setInterval(() => {
 			if (timer <= 1) {
 				clearInterval(interval);
+				counting = false
 				timer = 0;
 				app.reveal = true;
 			} else {
@@ -21,6 +24,15 @@
 
 	startTimer();
 
+	function pauseHandler(event: KeyboardEvent) {
+		if (event.code === 'Space' && counting) {
+			clearInterval(interval);
+			counting = false
+		} else if (event.code === 'Space') {
+			startTimer();
+		}
+	}
+
 	$effect(() => {
 		if(app.questionIndex) {
 			timer = 59
@@ -28,6 +40,8 @@
 		}
 	})
 </script>
+
+<svelte:body on:keydown={pauseHandler} />
 
 <div class="absolute top-8 w-full text-center text-5xl/16 font-bold text-white tracking-wide">
 	0:{timer.toString().padStart(2, "0")}
@@ -42,10 +56,10 @@
 		<div class="grid grid-flow-col grid-cols-2 grid-rows-2 gap-y-11 gap-x-10 mx-auto w-[80%] options">
 			{#each question?.options ?? [] as option, i}
 				{@const isAnswer = i === question.answer}
-				{@const voteCount = app.votes.filter(v => v.value !== i)}
+				{@const voteCount = app.votes.filter(v => v.value !== i.toString())}
 				<div class="relative transition duration-700 ease-out {isAnswer && app.reveal? 'bg-green-600': 'bg-slate-700'} rounded-xl overflow-hidden grow-0">
 					<div
-						class="absolute h-full bg-slate-400 w-[{voteCount / app.votes.length}%]"
+						class="absolute h-full bg-slate-400 w-[{voteCount / (app.votes.length || 1)}%]"
 						class:hidden={app.reveal}
 					></div>
 					<div class="relative p-4 text-2xl font-bold tracking-wide option">

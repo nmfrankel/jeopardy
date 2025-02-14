@@ -34,7 +34,7 @@
 			case 'KeyR':
 				app.reveal = !app.reveal;
 				break;
-			case 'Space':
+			case 'KeyL':
 				activeScreen = activeScreen === 'leaderboard' ? 'question' : 'leaderboard';
 				break;
 			case 'ArrowLeft':
