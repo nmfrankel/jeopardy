@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { supabase } from '$lib/supabase/realtime';
 	import { app } from '../state.svelte';
 
 	let question = $derived(app.questions_list[app.questionIndex]);
@@ -23,6 +24,24 @@
 	}
 
 	startTimer();
+
+	supabase
+	.channel('vote')
+	.on('postgres_changes', { event: 'INSERT', schema: 'public', table: 'vote' }, async (payload: any) => {
+		console.log('Change received!', payload)
+		const { user, id, value } = payload.new
+
+		await supabase.from('vote').update({ question_number: app.questionIndex, is_correct: value.trim() === (app.questions_list[app.questionIndex].answer + 1).toString(10) }).eq('id', id);
+
+		app.votes = [...app.votes, {
+			value,
+			name: user,
+			questionNumber: app.questionIndex
+		}]
+
+		console.log('Vote added!', app.votes)
+	})
+	.subscribe()
 
 	function pauseHandler(event: KeyboardEvent) {
 		if (event.code === 'Space' && counting) {
@@ -56,10 +75,12 @@
 			{#each question?.options ?? [] as option, i}
 				{@const isAnswer = i === question.answer}
 				{@const voteCount = app.votes.filter(v => v.value.trim() === (i+1).toString() && v.questionNumber === app.questionIndex).length}
+				{@const width = voteCount && app.votes.length > 0 ? (voteCount / app.votes.length) * 100 : 0}
+				<!-- {(voteCount / (app.votes.length || 1)) * 100} -->
 
 				<div class="relative transition duration-700 ease-out {isAnswer && app.reveal? 'bg-green-600': 'bg-slate-700'} rounded-xl overflow-hidden grow-0">
 					<div
-						class="absolute h-full bg-slate-400 w-[{(voteCount / (app.votes.length || 1)) * 100}%]"
+						class="absolute h-full bg-slate-400 w-[{width}%]"
 						class:hidden={app.reveal}
 					></div>
 					<div class="relative p-4 text-2xl font-bold tracking-wide option">
