@@ -75,7 +75,7 @@
 			{#each question?.options ?? [] as option, i}
 				{@const isAnswer = i === question.answer}
 				{@const voteCount = app.votes.filter(v => v.value.trim() === (i+1).toString() && v.questionNumber === app.questionIndex).length}
-				{@const width = voteCount && app.votes.length > 0 ? (voteCount / app.votes.length) * 100 : 0}
+				{@const width = (voteCount / (app.votes.length || 1)) * 100}
 				<!-- {(voteCount / (app.votes.length || 1)) * 100} -->
 
 				<div class="relative transition duration-700 ease-out {isAnswer && app.reveal? 'bg-green-600': 'bg-slate-700'} rounded-xl overflow-hidden grow-0">
