@@ -22,12 +22,13 @@ type GameQuestion = {
 }
 
 type Vote = {
-	id: number
+	// id: number
 	value: string
-	user_id: string
-	question_number: number
-	is_correct: boolean
-	created_at: Date
+	name: string
+	// user_id: string
+	// question_number: number
+	// is_correct: boolean
+	// created_at: Date
 }
 
 export let app = $state<GameState>({

@@ -3,7 +3,6 @@
 	import Leaderboard from './screens/Leaderboard.svelte';
 	import { app } from './state.svelte'
 	import { supabase } from '$lib/supabase/realtime';
-	import { ConsoleLogWriter } from 'drizzle-orm';
 	
 	const screens = {
 		question: Question,
@@ -14,7 +13,7 @@
 		'broadcast',
 		{ event: 'incoming_vote' },
 		(payload: any) => {
-			const { body, endpoint} = payload
+			const { body, endpoint} = payload.payload
 
 			app.votes.push({
 				value: body,
