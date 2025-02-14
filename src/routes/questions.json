@@ -202,5 +202,89 @@
 		],
 		"answer": -1,
 		"played": false
+	},
+	{
+		"topic": "",
+		"question": "What yeshiva is moshe sherer actually in",
+		"options": [
+			"Romemus Hatorah",
+			"Post",
+			"Yagdil",
+			"None of the above"
+		],
+		"answer": 0,
+		"played": false
+	},
+	{
+		"topic": "",
+		"question": "How many times has the civic been by the mechanic this year",
+		"options": [
+			"5",
+			"21",
+			"8",
+			"Too many to count"
+		],
+		"answer": 3,
+		"played": false
+	},
+	{
+		"topic": "",
+		"question": "Who picked up the Rosh Hayeshiva from Teterboro Airport",
+		"options": [
+			"Yakov Weintraub",
+			"Mordechai Ely",
+			"The Rebbetzin",
+			"A private driver"
+		],
+		"answer": 3,
+		"played": false
+	},
+	{
+		"topic": "",
+		"question": "What kind of car did R yaakov meir drive before his pilot",
+		"options": [
+			"Camry",
+			"Ferrari",
+			"Sportage",
+			"GV80"
+		],
+		"answer": 2,
+		"played": false
+	},
+	{
+		"topic": "",
+		"question": "How many arrive taxi were ordered to 441 South pascack since they opened",
+		"options": [
+			"298",
+			"476",
+			"95",
+			"347"
+		],
+		"answer": 0,
+		"played": false
+	},
+	{
+		"topic": "",
+		"question": "Which other yeshiva is Reb nesanel a rebbi in",
+		"options": [
+			"Sender's",
+			"Reb Mottel",
+			"Mayorfeld's",
+			"Firecrackers"
+		],
+		"answer": 2,
+		"played": false
+	},
+	{
+		"topic": "",
+		"question": "How many caterers did yeshiva go through since last elul zman",
+		"options": [
+			"3",
+			"2",
+			"5",
+			"I don't eat yeshiva's food"
+		],
+		"answer": 0,
+		"played": false
 	}
 ]
