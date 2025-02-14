@@ -63,7 +63,7 @@
 						class:hidden={app.reveal}
 					></div>
 					<div class="relative p-4 text-2xl font-bold tracking-wide option">
-						{option}
+						{option}&nbsp;
 					</div>
 				</div>
 			{/each}
