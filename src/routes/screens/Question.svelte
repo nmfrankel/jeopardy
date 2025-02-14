@@ -75,11 +75,10 @@
 			{#each question?.options ?? [] as option, i}
 				{@const isAnswer = i === question.answer}
 				{@const voteCount = app.votes.filter(v => v.value.trim() === (i+1).toString() && v.questionNumber === app.questionIndex).length}
-				{@const width = (voteCount / (app.votes.length || 1)) * 100}
 
 				<div class="relative transition duration-700 ease-out {isAnswer && app.reveal? 'bg-green-600': 'bg-slate-700'} rounded-xl overflow-hidden grow-0">
 					<div
-						class="absolute h-full bg-slate-400 w-[{width}%]"
+						class="absolute h-full bg-slate-400" style="width: {(voteCount / (app.votes.length || 1)) * 100}%"
 						class:hidden={app.reveal}
 					></div>
 					<div class="relative p-4 text-2xl font-bold tracking-wide option">
