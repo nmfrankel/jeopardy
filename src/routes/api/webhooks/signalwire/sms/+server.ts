@@ -15,7 +15,7 @@ export async function POST ({ request }) {
 
 	return new Response(`<?xml version="1.0" encoding="UTF-8"?><Response></Response>`, { 
 		headers: {
-			'Content-Type': 'application/json'
+			'Content-Type': 'text/xml'
 		}
 	});
 }
