@@ -1,0 +1,98 @@
+[
+	{
+		"topic": "",
+		"question": "Who snitched to the Rosh Yeshivah when Lillian got a hot tub",
+		"options": ["The neighbors", "The cleaning lady", "Kokas", "Still unknown"],
+		"answer": 1,
+		"played": false
+	},
+	{
+		"topic": "",
+		"question": "How many steps are there at the front entrance of the yeshiva (with the code)",
+		"options": ["4", "5", "6", "7"],
+		"answer": 2,
+		"played": false
+	},
+	{
+		"topic": "",
+		"question": "How do you say `Thank you` in Polish",
+		"options": ["Dzień dobry (jin dubray)", "Dziękuję (jin-koy-yeh)", "Gazwona", "Tomick"],
+		"answer": 1,
+		"played": false
+	},
+	{
+		"topic": "",
+		"question": "What is Primo’s real name",
+		"options": ["Jose", "Angel", "Primo", "Fernando"],
+		"answer": 1,
+		"played": false
+	},
+	{
+		"topic": "",
+		"question": "How many burgers were grilled tonight",
+		"options": ["127", "200", "76", "108"],
+		"answer": 3,
+		"played": false
+	},
+	{
+		"topic": "",
+		"question": "Which shtender does the Rosh Yeshiva prefer",
+		"options": [
+			"The new (brown) one",
+			"The old one with flat bar",
+			"R' Yaakov Meir's",
+			"The old one with the bar going up"
+		],
+		"answer": 3,
+		"played": false
+	},
+	{
+		"topic": "",
+		"question": "Who named Mordechai Ely `Ponky`",
+		"options": ["JB", "Tzvi Beast", "Weiser", "Mashgiach in Telshe (Telz)"],
+		"answer": 2,
+		"played": false
+	},
+	{
+		"topic": "",
+		"question": "What time is Shachris tomorrow",
+		"options": ["7:45", "8:35", "8:55", "9:05"],
+		"answer": 2,
+		"played": false
+	},
+	{
+		"topic": "",
+		"question": "Who picked up the Rosh Yeshiva from Teterboro Airport",
+		"options": ["Yaakov Weintraub", "Mordechai Ely", "The Rebbetzin", "A private driver"],
+		"answer": 1,
+		"played": false
+	},
+	{
+		"topic": "",
+		"question": "Since Arrive opened, how many taxis were ordered to 441 South Pascack",
+		"options": ["298", "476", "95", "347"],
+		"answer": 0,
+		"played": false
+	},
+	{
+		"topic": "",
+		"question": "How many times have the Rosh Yeshiva’s two cars been to the mechanic this year",
+		"options": ["18", "8", "11", "Too many to count"],
+		"answer": 3,
+		"played": false
+	},
+	{
+		"topic": "",
+		"question": "What time does Baruchu actually happen on a regular day",
+		"options": ["8:10", "7:55", "8:05", "8:07"],
+		"answer": 3,
+		"played": false
+	},
+	{
+		"topic": "",
+		"question": "What yeshiva is Moshe Sherer actually in",
+		"options": ["Romemus Hatorah", "Post", "Yagdil", "None of the above"],
+		"answer": 0,
+		"played": false
+	}
+]
