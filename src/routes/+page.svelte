@@ -13,7 +13,14 @@
 	supabase.channel('votes').on(
 		'broadcast',
 		{ event: 'incoming_vote' },
-		(payload: any) => console.log('Change received!', payload)
+		(payload: any) => {
+			const { body, endpoint} = payload
+
+			app.votes.push({
+				value: body,
+				name: endpoint
+			})
+		}
 	).subscribe()
 	
 	// const handleInserts = (payload: any) => {
