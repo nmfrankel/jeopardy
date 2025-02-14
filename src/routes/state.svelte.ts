@@ -25,6 +25,7 @@ type Vote = {
 	// id: number
 	value: string
 	name: string
+	questionNumber: number
 	// user_id: string
 	// question_number: number
 	// is_correct: boolean

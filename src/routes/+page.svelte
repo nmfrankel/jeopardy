@@ -17,7 +17,8 @@
 
 			app.votes.push({
 				value: body,
-				name: endpoint
+				name: endpoint,
+				questionNumber: app.questionIndex
 			})
 		}
 	).subscribe()

@@ -55,7 +55,7 @@
 		<div class="grid grid-flow-col grid-cols-2 grid-rows-2 gap-y-11 gap-x-10 mx-auto w-[80%] options">
 			{#each question?.options ?? [] as option, i}
 				{@const isAnswer = i === question.answer}
-				{@const voteCount = app.votes.filter(v => v.value === (i+1).toString()).length}
+				{@const voteCount = app.votes.filter(v => v.value.trim() === (i+1).toString() && v.questionNumber === app.questionIndex).length}
 
 				<div class="relative transition duration-700 ease-out {isAnswer && app.reveal? 'bg-green-600': 'bg-slate-700'} rounded-xl overflow-hidden grow-0">
 					<div
